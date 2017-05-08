@@ -1,5 +1,5 @@
 #LoadMask jQuery plugin
-[Ver em portugês.](README.pt-BR.md)
+[See in English.](README.md)
 ##LoadMask jQuery plugin
 The behavior of this plugin is largely based on handy Element.mask() method from ExtJS Framework.
 LoadMask jQuery plugin can mask DOM elements while their content is loading or changing to prevent user interactions and inform that some background task is still running. It is very light (~2Kb) and easy to use.
