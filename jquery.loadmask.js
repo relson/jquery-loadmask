@@ -18,7 +18,7 @@
 	 *              before the delay times out, no mask is displayed. This can be used to prevent unnecessary 
 	 *              mask display for quick processes.   	
 	 */
-	$.fn.loadMask = function(label, delay){
+	$.fn.loadmask = function(label, delay){
 		$(this).each(function() {
 			if(delay !== undefined && delay > 0) {
 		        var element = $(this);
@@ -32,7 +32,7 @@
 	/**
 	 * Removes mask from the element(s). Accepts both single and multiple selectors.
 	 */
-	$.fn.unloadMask = function(){
+	$.fn.unloadmask = function(){
 		$(this).each(function() {
 			$.unmaskElement($(this));
 		});
