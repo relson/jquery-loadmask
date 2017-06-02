@@ -1,48 +1,58 @@
-LoadMask jQuery plugin
-===
+# LoadMask jQuery plugin
 
 [See in English.](README.md)
 
-##LoadMask jQuery plugin
-The behavior of this plugin is largely based on handy Element.mask() method from ExtJS Framework.
-LoadMask jQuery plugin can mask DOM elements while their content is loading or changing to prevent user interactions and inform that some background task is still running. It is very light (~2Kb) and easy to use.
+O comportamento desse plugin é bastante baseado no conveniente método  ```Element.mask()``` do [ExtJS Framework](https://sencha.com/products/extjs/) e esse fork em específico adaptado para trabalhar em conjunto com outro plugin, o [jQuery Mask Plugin](http://igorescobar.github.io/jQuery-Mask-Plugin/).
 
-[You can try online demo here.](http://jquery-loadmask.googlecode.com/svn/trunk/demo/index.html)
+O LoadMask jQuery plugin pode colocar uma máscara em um elmento DOM enquanto o seu conteúdo está sendo carregado ou modificando evitando interações e informar que a tarefa em segundo plano ainda está rodando. É bem leve (~2Kb) e fácil de usar.
 
-####Usage
-jQuery version required: 1.2.3 or later.
+[~~Você pode ver uma demonstração online aqui.~~](http://jquery-loadmask.googlecode.com/svn/trunk/demo/index.html)
 
-Please note that only elements that accept child nodes can be masked.
+#### Uso
+> **Versão do jQuery necessária:** 1.2.3 ou superior.
 
-To start using the plugin you need to include jquery.loadmask.css and jquery.loadmask.js (or its minified version jquery.loadmask.min.js) to your html page:
+_Observe que somente os elmentos que aceitam nós filhos podem receber a mascara._
 
+Para começar a usar o plugin você precisa incluir os arquivos ```jquery.loadmask.css``` e ```jquery.loadmask.js``` (ou sua versão minificada ```jquery.loadmask.min.js```) na sua página html:
+```html
 <link href="jquery.loadmask.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="jquery.loadmask.min.js"></script>
-Masking
-To put a mask over an element (or multiple elements) simply call mask(label, delay) method with two optional label and delay parameters:
+```
 
-$("#mydiv").mask("Loading...");
-$(".grids").mask("Loading...", 500);
-If label parameter is provided, a little box with this label and a spinner will be placed on top of the mask, otherwise only a transparent gray mask is displayed.
+#### Colocando a Máscara
+Para colocar uma máscara sobre um elemento (ou vários elementos) simplesmente chame o método ```loadmask(label, delay)``` com dois parâmetros ```label``` e ```delay``` opcionais:
 
-delay parameter sets a delay in milliseconds before element(s) is masked. If unmask() is called before the delay times out, no mask is displayed. This can be used to prevent unnecessary mask display for quick processes.
+```javascript
+$("#mydiv").loadmask("Carregando...");
+$(".grids").loadmask("Carregando...", 500);
+```
 
-####Unmasking
-To remove a previously displayed mask from an element (or multiple elements) call unmask() without any parameters:
+Se o parâmetro ```label``` for informado, uma caixinha com esse label e um ícone girando ao lado será mostrada, caso contrário será somente uma máscara cinza transparente.
 
-$("#mydiv").unmask();
-Calling unmask() on a delayed mask prevents it from showing up.
+O parâmetro ```delay``` configura um atraso em milisegundos antes que o(s) elemento(s) tenha a máscara. Se o método ```unloadmask()``` for chamado antes do tempo de atraso estabelecido, nenhuma máscara será mostrada. Isso pode ser utilizado para processos rápidos em que exibir uma máscara não é necessário.
 
-####Checking if an element is masked
-You can use isMasked() method on a single element to check if it is currently masked. Please note that this method will return false while mask is delayed.
+#### Retirando a Mascara
+Para remover uma máscara anteriormente colocada em um elmento (ou vários elementos) chame ```unloadmask()``` sem nenhum parâmetro:
 
+```javascript
+$("#mydiv").unloadmask();
+```
+
+Chamando ```unloadmask()``` em uma máscara com atraso evita que ela seja mostrada.
+
+#### Verificando se um elemento já está com a máscara
+Você pode usar o método ```isMasked()``` em um elemento para verificar se ele já está com a máscara. Observe que o método irá retornar ```false``` enquanto a máscara estiver esperando o tempo de atraso.
+
+```javascript
 if($("#mydiv").isMasked()) { ... }
+```
 
-####Integration with Jquery UI
-Please take a look at this [code](https://code.google.com/p/jquery-loadmask/issues/detail?id=4&can=1)
+#### Integração com jQuery UI
+Veja esse [código](https://code.google.com/p/jquery-loadmask/issues/detail?id=4&can=1)
 
-####Contributors
-wpaap - provided snapshot for integration with ASP.net UpdatePanel
-Artur Alexandre Moreira (artur.alexandre@gmail.com) - implemented delayed mask
-theonlylawislove - provided Jquery UI integration solution
-Thank you!
+#### Contribuições do projeto original
+* `wpaap` - provided snapshot for integration with ASP.net UpdatePanel
+* `Artur` - Alexandre Moreira (artur.alexandre@gmail.com) - implemented delayed mask
+* `theonlylawislove` - provided Jquery UI integration solution
+
+Obrigado!
