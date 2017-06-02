@@ -11,7 +11,7 @@ O LoadMask jQuery plugin pode colocar uma máscara em um elmento DOM enquanto o 
 #### Uso
 > **Versão do jQuery necessária:** 1.2.3 ou superior.
 
-_Observe que somente os elmentos que aceitam nós filhos podem receber a mascara._
+_Observe que somente os elementos que aceitam nós filhos podem receber a mascara._
 
 Para começar a usar o plugin você precisa incluir os arquivos ```jquery.loadmask.css``` e ```jquery.loadmask.js``` (ou sua versão minificada ```jquery.loadmask.min.js```) na sua página html:
 ```html
