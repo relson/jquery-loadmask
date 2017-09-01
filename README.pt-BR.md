@@ -11,7 +11,7 @@ O LoadMask jQuery plugin pode colocar uma máscara em um elmento DOM enquanto o 
 #### Uso
 > **Versão do jQuery necessária:** 1.2.3 ou superior.
 
-_Observe que somente os elmentos que aceitam nós filhos podem receber a mascara._
+_Observe que somente os elementos que aceitam nós filhos podem receber a máscara._
 
 Para começar a usar o plugin você precisa incluir os arquivos ```jquery.loadmask.css``` e ```jquery.loadmask.js``` (ou sua versão minificada ```jquery.loadmask.min.js```) na sua página html:
 ```html
@@ -31,7 +31,7 @@ Se o parâmetro ```label``` for informado, uma caixinha com esse label e um íco
 
 O parâmetro ```delay``` configura um atraso em milisegundos antes que o(s) elemento(s) tenha a máscara. Se o método ```unloadmask()``` for chamado antes do tempo de atraso estabelecido, nenhuma máscara será mostrada. Isso pode ser utilizado para processos rápidos em que exibir uma máscara não é necessário.
 
-#### Retirando a Mascara
+#### Retirando a Máscara
 Para remover uma máscara anteriormente colocada em um elmento (ou vários elementos) chame ```unloadmask()``` sem nenhum parâmetro:
 
 ```javascript
