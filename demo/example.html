@@ -23,15 +23,15 @@
 			<input type="button" value="Process" id="process">
 			<input type="button" value="Cancel" id="cancel">
 		</div>
-		
+
 		<script>
 			$(document).ready(function(){
 				$("#process").bind("click", function () {
-					$("#content").mask("Waiting...");
+					$("#content").loadmask("Waiting...");
 				});
-				
+
 				$("#cancel").bind("click", function () {
-					$("#content").unmask();
+					$("#content").unloadmask();
 				});
 			});
 		</script>
